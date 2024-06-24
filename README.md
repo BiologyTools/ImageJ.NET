@@ -23,5 +23,8 @@ image.getProcessor().invert();
 string outputPath = "C:/ImageJ/test.jpeg"; // Replace with your output path
 ij.IJ.save(image, outputPath);
 ```
+- ImageJ should then open up with your image and save the resulting image.
+  - Note if working with the pre-release ImageJ button texts will appear in Chinese.
+
 ![image](https://github.com/BiologyTools/ImageJControl/assets/84872500/1749b84e-90a8-4ef4-ab7b-6d84220b7ea9)
 
