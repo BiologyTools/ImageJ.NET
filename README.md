@@ -1,3 +1,5 @@
+[![NuGet version (ImageJ.NET)](https://img.shields.io/nuget/v/BioFormats.NET6.svg)](https://www.nuget.org/packages/ImageJ.NET/154.0.0)
+[![NuGet version (ImageJ.NET)](https://img.shields.io/nuget/dt/BioFormats.NET6?color=g)](https://www.nuget.org/packages/ImageJ.NET/154.0.0)
 # ImageJ.NET
  ImageJ control using C# and IKVM 8.9.0 pre-release.
 
