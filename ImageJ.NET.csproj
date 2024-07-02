@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>false</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>AnyCPU</Platforms>
+    <Description>ImageJ "ij154" converted to .NET with IKVM.</Description>
+    <Authors>Erik Repo</Authors>
+    <Title>ImageJ.NET</Title>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>154.0.0</Version>
+    <PackageProjectUrl>https://imagej.net/</PackageProjectUrl>
+    <PackageIcon>imagej.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/BiologyTools/ImageJ.NET</RepositoryUrl>
+    <PackageTags>imagej; microscopy;</PackageTags>
+    <PackageReleaseNotes>First release of ImageJ.NET.</PackageReleaseNotes>
+    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance> 
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="ij.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ij.dll">
+      <Pack>True</Pack>
+      <PackagePath>\lib\net8.0</PackagePath>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+        <IkvmReference Include="ij.jar">
+          <AssemblyName>ij</AssemblyName>
+          <AssemblyVersion>1.0.0.0</AssemblyVersion>
+          <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+      </IkvmReference>
+    </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="IKVM" Version="8.9.0-PullRequest0528.145" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="imagej.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
